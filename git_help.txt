@@ -16,3 +16,13 @@ git branch -M main
 git push -u origin main
 
 
+sudo apt remove apktool
+
+# Descarrega o .jar mais recente de https://apktool.org (ou dos Releases no GitHub)
+sudo mv apktool_X.Y.Z.jar /usr/local/bin/apktool.jar
+
+# Script wrapper
+sudo wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O /usr/local/bin/apktool
+sudo chmod +x /usr/local/bin/apktool /usr/local/bin/apktool.jar
+
+apktool --version   # já não deve aparecer "-dirty"
